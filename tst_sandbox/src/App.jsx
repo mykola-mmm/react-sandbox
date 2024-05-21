@@ -37,31 +37,30 @@ function App() {
     // div2.appendChild(div1)
     'use strict';
     // f.call(null);
-    f(null)
-    function f() {
-      alert(this);
-    }
+    console.log(document.forms.myform);
+
   }
 
-  function tst(){
-    var as = document.getElementsByTagName("a");
-    for (var i = 0; i < as.length; i++) {
-      as[i].onclick = function() {
-        console.log(as[i].innerText);
+  // function tst(){
+  //   var as = document.getElementsByTagName("a");
+  //   for (var i = 0; i < as.length; i++) {
+  //     as[i].onclick = function() {
+  //       console.log(as[i].innerText);
 
-      }
-    }
-  }
+  //     }
+  //   }
+  // }
 
   return (
     <>
+    <form name="myform">...</form>
     <ul>
       <li><a href="#" onClick={() => console.log(this.innerText())}>A</a></li>
       <li><a href="#">B</a></li>
       <li><a href="#">C</a></li>
     </ul>
 
-    {tst()}
+    {/* {tst()} */}
 
       <button id="elem" style={style} onClick={dosmt}>
         <span>sdsd</span>
@@ -71,6 +70,8 @@ function App() {
       </button>
       <div id="div1" style={style}>
         div1
+        {/* {div = getElementById("div1")} */}
+        {/* {console.log(document.getComputedStyle(document.getElementById("div1")).marginTop)} */}
       </div>
       <div id="div2" style={style2}>div2</div>
 
